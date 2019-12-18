@@ -6,6 +6,10 @@ let Article = require('../models/article');
 // User Model
 let User = require('../models/user');
 
+
+router.get('/', function(req, res, next){
+  res.render('index.pug')
+})
 // Add Route
 router.get('/add', ensureAuthenticated, function(req, res){
   res.render('add_article', {
